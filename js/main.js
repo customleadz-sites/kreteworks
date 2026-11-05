@@ -109,5 +109,14 @@ document.querySelectorAll('form.quote-form').forEach(function (form) {
   });
 });
 
+// ---- ?s=patios / ?s=foundations → jump to that section (ad groups 4 + 5 land here; "#" can't take the URL suffix) ----
+try {
+  var sec = new URLSearchParams(location.search).get('s');
+  if (sec && /^[a-z-]+$/.test(sec)) {
+    var target = document.getElementById(sec);
+    if (target) { window.addEventListener('load', function () { target.scrollIntoView({ block: 'start' }); }); }
+  }
+} catch (e) {}
+
 // ---- Footer year ----
 document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });

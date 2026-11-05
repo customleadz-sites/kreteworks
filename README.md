@@ -44,10 +44,11 @@ The ads will use `{LOCATION(City)}` in headlines. The page matches it:
    `redirect` is hard-coded to `https://kreteworks.vercel.app/thank-you` — change it if the domain changes.
    Bot protection = Web3Forms honeypot (`botcheck` box hidden off-screen; Web3Forms drops any submit that has it
    ticked, and `js/main.js` blocks it client-side too). Name, phone, town and the project-type dropdown are required.
-2. **Tracking is a commented-out stub** in every `<head>` (`AW-XXXXXXXXXX`). Once the Ads account exists:
-   gtag config + website-call phone snippet (`phone_conversion_number: (704) 635-1960`) on all pages,
-   and the "Quote form" conversion label in `thank-you.html`. `js/main.js` already fires `call_click` /
-   `form_submit` gtag events (secondary) and is safe while gtag isn't configured.
+2. **Tracking is LIVE (2026-11-05):** Google tag `AW-17064399996` + website-call number swap (label
+   `QDmcCLKx97IdEPyo-Mg_`, "Calls from website", 45-sec) in every page head; the "Quote form" conversion
+   (`-CnzCLWx97IdEPyo-Mg_`) fires on `thank-you.html`. `js/main.js` also sends `call_click` / `form_submit` as
+   secondary gtag events. Ad groups 4 + 5 land on `/?s=patios` and `/?s=foundations` — main.js scrolls to that
+   section (a `#` anchor can't take the campaign's `loc=` URL suffix).
 3. **Reviews section** shows only the "5.0 on Google" banner (true per Alex: ~8 reviews, all 5 stars).
    Paste 3 verbatim reviews into the commented block in each page once we have the GBP link.
    **No review count on the page until we see the GBP.**
