@@ -72,7 +72,8 @@ The ads will use `{LOCATION(City)}` in headlines. The page matches it:
 - `vercel.json`: images immutable, CSS/JS `max-age=0, must-revalidate` (never immutable-cache code).
 - Pages are `noindex` on purpose (ads pages, not the SEO site). No `robots.txt` → AdsBot is not blocked.
 
-## Deploy (when Kennedy says so — review locally first)
-Repo **customleadz-sites/kreteworks**, Vercel project **kreteworks** → `kreteworks.vercel.app`.
-Git author email + org token rules: `git-deploy` skill. Never `git add -A` from the client folder root;
-this `site/` folder is the repo root. No hyphens in the domain (Kennedy's rule).
+## Deploy — LIVE 2026-11-05
+Repo **customleadz-sites/kreteworks** (this `site/` folder is the repo root), Vercel project **kreteworks**
+(team custom-leadz, id prj_cQuI6HcaZRHK1H0rAyhjSSTHekdw) → **https://kreteworks.vercel.app**. Push to `main`
+auto-deploys. Deployment protection turned OFF (pages are public). Git author email + org token rules: `git-deploy`
+skill. Never `git add -A` from the client folder root. No hyphens in the domain (Kennedy's rule).
